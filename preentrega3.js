@@ -23,4 +23,5 @@ function mostrar(){
 window.onload = function() {
     // Código que se ejecuta cuando la página termina de cargar: MOSTRAR APODO
     alert("La página ha cargado completamente");
-};
+}; 
+

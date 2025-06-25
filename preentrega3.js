@@ -14,7 +14,7 @@ function mostrar(){
     let id=document.querySelector("#hola");
     //for q recorre el array
     for (let i = 0; i < usuarios.length; i++) {
-      id.innerHTML=`nombre: ${usuarios[i].nombre}`;
+      id.innerHTML +=`nombre: ${usuarios[i].nombre}`;
     }
     //id.innerHTML= `nombre: ${usuarios.nombre[i], }`
 }

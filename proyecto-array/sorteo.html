@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorteo</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="no-dividido">
+      <div class="texto">
+        <h1>¡¡¡Bienvenidos al Sorteo del iPhone 16!!!</h1>
+        <p>🎉¡Participá gratis y ganá!🎉</p>
+
+        <!-- Mensaje al cargar si ya participó -->
+        <p id="mensajeAlCargar"></p>
+      </div>
+
+      <!-- Formulario de registro -->
+      <div class="contenedor-formulario">
+        <form class="formulario" id="formRegisto">
+          <label for="nombre"> Nombre y Apellido:</label>
+          <input
+            type="text"
+            id="nombre"
+            placeholder="Nombre y Apellido"
+            required
+          />
+
+          <label for="edad"> Edad:</label>
+          <input type="number" id="edad" placeholder="Edad" required />
+
+          <label for="email"> Email:</label>
+          <input type="email" id="email" placeholder="Email" required />
+          <!-- El apodo no entendi si lo oiniamos acá o aparte, pero lo dejo-->
+          <label for="apodo"> Apodo:</label>
+          <input type="text" id="apodo" placeholder="Apodo" required />
+          <button type="submit">Participar</button>
+        </form>
+      </div>
+
+      <!-- Mensaje de participación -->
+      <p id="mensajeParticipacion""></p>
+
+      <!-- Botón para alternar lista -->
+      <div class="centrado-total">
+        <button class="boton-mostrar" onclick="alternarLista()" >
+          Mostrar/Ocultar Participantes
+        </button>
+      </div>
+
+      <!-- Lista de usuarios -->
+      <div id="listaUsuarios" style="display: none"></div>
+    </main>
+
+    <script src="./prueba.js"></script>
+  </body>
+</html>

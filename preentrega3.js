@@ -17,7 +17,14 @@ function mostrar(){
     }
 }
 
+
+
 window.onload = function() {
-    // Código que se ejecuta cuando la página termina de cargar: MOSTRAR APODO
-    //alert("La página ha cargado completamente");
+  
+  if(localStorage.getItem("apodo")==null){
+      let nuevoApo = prompt("¿Como te gustaria que te llame?");
+      localStorage.setItem("apodo", `${nuevoApo}`);
+    } 
+  let apodo = localStorage.getItem("apodo"); 
+  alert(`Hola ${apodo}!`)  
 };

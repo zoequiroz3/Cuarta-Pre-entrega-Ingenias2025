@@ -15,7 +15,7 @@
         <!-- Mensaje al cargar si ya participó -->
         <p id="mensajeAlCargar"></p>
       </div>
-
+      <button onclick="borrarApodo()">Cambiar apodo</button>
       <!-- Formulario de registro -->
       <div class="contenedor-formulario">
         <form class="formulario" id="formRegisto">
@@ -33,9 +33,7 @@
           <label for="email"> Email:</label>
           <input type="email" id="email" placeholder="Email" required />
           <!-- El apodo no entendi si lo oiniamos acá o aparte, pero lo dejo-->
-          <label for="apodo"> Apodo:</label>
-          <input type="text" id="apodo" placeholder="Apodo" required />
-          <button type="submit">Participar</button>
+          <button type="button" onclick="agregarParticipante()">Participar</button>
         </form>
       </div>
 
@@ -53,6 +51,6 @@
       <div id="listaUsuarios" style="display: none"></div>
     </main>
 
-    <script src="./prueba.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>

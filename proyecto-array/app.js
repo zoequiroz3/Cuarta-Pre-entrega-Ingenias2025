@@ -11,10 +11,11 @@ let usuarios = [
   { id: 2, nombre: "Ana", edad: 30, email: "ana@mail.com" },
 ];
 
-function agregarParticipant  const nombre = document.querySelector("#nombre").value;
+function agregarParticipante() { 
+  const nombre = document.querySelector("#nombre").value;
   const edad = document.querySelector("#edad").value;
   const email = document.querySelector("#email").value;
-e() {
+
   const id = usuarios[usuarios.length - 1].id + 1;
 
   const participante = new Participante(id, nombre, edad, email);

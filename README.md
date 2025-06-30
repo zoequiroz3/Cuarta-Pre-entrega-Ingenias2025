@@ -21,10 +21,8 @@ Este proyecto es una aplicación web simple que permite registrar participantes 
 - JavaScript
 
 ## 📝 Estructura del proyecto
-
-📁 proyecto-sorteo/
-├── index.html → Página de inicio
-├── sorteo.html → Página de registro y lista de participantes
-├── app.js → Lógica en JavaScript
-├── style.css → Estilos del sitio
-└── assets/ → Imágenes y fondo
+- `index.html`: Página de inicio
+- `sorteo.html`: Página de registro y lista de participantes
+- `app.js`: Lógica en JavaScript
+- `style.css`: Estilos del sitio
+- `assets/`: Carpeta con imágenes y fondos

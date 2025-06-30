@@ -16,7 +16,7 @@ function mostrar(){
     let id=document.querySelector("#listaUsuarios");
     //for q recorre el array
     for (let i = 0; i < usuarios.length; i++) {
-      id.innerHTML +=`<li>nombre: ${usuarios[i].nombre}, edad: ${usuarios[i].edad}, email: ${usuarios[i].email} </li>`;
+      id.innerHTML +=`<div class="card"> nombre: ${usuarios[i].nombre}, edad: ${usuarios[i].edad}, email: ${usuarios[i].email}<div>`;
     }
 }
 

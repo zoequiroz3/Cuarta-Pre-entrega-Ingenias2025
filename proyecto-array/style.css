@@ -154,6 +154,25 @@ img {
   padding: 20px;
 }
 
+.lista-usuarios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.lista-usuarios .card {
+  background-color: #f8f6fc;
+  color: #2f2f2f;
+  border-left: 6px solid #5e2e91;
+  border-radius: 10px;
+  padding: 16px;
+  min-width: 250px;
+  flex: 1 1 calc(33% - 16px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  white-space: pre-line;
+}
+
 @media (max-width: 1250px) {
   .boton {
     text-align: right;

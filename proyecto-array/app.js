@@ -33,6 +33,9 @@ function agregarParticipante() {
 
   const participante = new Participante(id, nombre, edad, email);
   usuarios.push(participante);
+  alert("Gracias por participar! Te deseamos mucha suerte");
+
+  document.querySelector("#formRegisto").reset()
 }
 
 window.onload = () => {

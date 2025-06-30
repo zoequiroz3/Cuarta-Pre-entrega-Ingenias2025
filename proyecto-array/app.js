@@ -32,21 +32,22 @@ function agregarParticipante() {
 }
 
 window.onload = () => {
-  // lo que haya dentro de localStorage se guarda en apodo
+  // Intentar recuperar el apodo guardado
   let apodo = localStorage.getItem("apodo");
-  
-  // Si no existe, le pedimos al usuario que lo ingrese
-  if (!apodo) {
-    let apodoIngresado;
 
-    while (apodoIngresado === null){
-      apodoIngresado = prompt("¡Hola! ¿Cómo te gustaría que te llame? Compartenos tu apodo:");
-    };
+  // Si no existe, pedirlo al usuario
+  if (!apodo) {
+    let apodoIngresado = null;
+
+    while (!apodoIngresado) {
+      apodoIngresado = prompt("¡Hola! ¿Cómo te gustaría que te llame? Compártenos tu apodo:");
+    }
 
     localStorage.setItem("apodo", apodoIngresado);
-    apodo = apodoIngresado
+    apodo = apodoIngresado;
   }
-  // Mostramos el mensaje en la pantalla
+
+  // Mostrar el mensaje
   const mensaje = document.getElementById("mensajeAlCargar");
   mensaje.textContent = `Bienvenido/a, ${apodo} 👋`;
 };

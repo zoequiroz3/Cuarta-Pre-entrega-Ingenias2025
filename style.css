@@ -129,7 +129,6 @@ a {
   border-radius: 8px;
 }
 .boton {
-  margin-right: 25px;
   text-align: right;
 }
 
@@ -150,10 +149,29 @@ a {
   text-align: right;
   font-weight: 300;
 }
+
 img {
   height: 800px;
   margin: auto;
   padding: 20px;
+}
+
+.imagen {
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  padding: 20px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.imagen img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
 }
 
 .lista-usuarios {
@@ -176,7 +194,7 @@ img {
 }
 
 @media (max-width: 1250px) {
-  .boton {
+  . {
     text-align: right;
   }
 
@@ -239,6 +257,13 @@ img {
   .texto-pag-principal p {
     font-size: 25px;
     text-align: center;
+  }
+
+  .imagen {
+    padding: 10px;
+  }
+  .imagen img {
+    max-width: 90vw;
   }
  
 }

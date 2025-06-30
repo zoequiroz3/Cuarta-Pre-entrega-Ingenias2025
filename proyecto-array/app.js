@@ -11,6 +11,15 @@ let usuarios = [
   { id: 2, nombre: "Ana", edad: 30, email: "ana@mail.com" },
 ];
 
+function mostrar(){
+    //var=recuperar el id 
+    let id=document.querySelector("#listaUsuarios");
+    //for q recorre el array
+    for (let i = 0; i < usuarios.length; i++) {
+      id.innerHTML +=`<li>nombre: ${usuarios[i].nombre}, edad: ${usuarios[i].edad}, email: ${usuarios[i].email} </li>`;
+    }
+}
+
 function agregarParticipante() { 
   const nombre = document.querySelector("#nombre").value;
   const edad = document.querySelector("#edad").value;

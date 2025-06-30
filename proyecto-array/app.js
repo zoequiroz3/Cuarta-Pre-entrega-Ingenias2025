@@ -36,6 +36,8 @@ function agregarParticipante() {
   alert("Gracias por participar! Te deseamos mucha suerte");
 
   document.querySelector("#formRegisto").reset()
+
+  mostrar();
 }
 
 window.onload = () => {

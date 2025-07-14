@@ -47,8 +47,10 @@ function agregarParticipante() {
 
   const id = usuarios[usuarios.length - 1].id + 1;
 
-  const participante = new Participante(id, nombre, edad, email);
+  const participante = new Participante(id, nombre, edadNum, email);
   usuarios.push(participante);
+  //guardo el usuario en local storage
+  localStorage.setItem("usuarios", JSON.stringify(usuarios));
   alert("Gracias por participar! Te deseamos mucha suerte");
 
   document.querySelector("#formRegisto").reset()
@@ -58,6 +60,11 @@ function agregarParticipante() {
 
 window.onload = () => {
   // Intentar recuperar el apodo guardado
+  const datos = localStorage.getItem("usuarios");
+  if (datos) {
+    usuarios = JSON.parse(datos);
+  }
+  
   let apodo = localStorage.getItem("apodo");
 
   // Si no existe, pedirlo al usuario

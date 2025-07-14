@@ -1,0 +1,309 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-image: url(./assets/fondosorteo2ruido.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: aliceblue;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  padding: 20px;
+  flex: 1;
+}
+
+main.dividido {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mitad {
+  width: 50%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0 0 2%;
+}
+
+.mitad-1 {
+  width: 50%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0 0 2%;
+}
+
+h1 {
+  text-align: center;
+  margin: 40px 10px 10px;
+  font-size: 50px;
+  word-break: break-word;
+}
+
+p {
+  text-align: center;
+  margin: 20px 10px 40px;
+  font-size: 28px;
+  word-break: break-word;
+}
+.contenedor-formulario {
+  margin: auto;
+  width: 100%;
+  max-width: 600px;
+  font-size: 15px;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  background-color: #36363677;
+  padding: 6%;
+  border-radius: 15px;
+  font-size: 20px;
+}
+
+.formulario label {
+  margin-bottom: 10px;
+  margin-top: 20px;
+  text-align: left;
+  font-size: 22px;
+}
+
+.formulario input,
+select {
+  background-color: aliceblue;
+  padding: 10px;
+  border-radius: 8px;
+  border: 0px;
+  font-size: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+button {
+  width: 100%;
+  margin: auto;
+  margin-top: 30px;
+  background-color: #79567a;
+  color: aliceblue;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 8px;
+}
+.formulario button {
+  margin-top: 30px;
+  width: 100%;
+  background-color: #79567a;
+  color: aliceblue;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 8px;
+}
+
+.boton-mostrar {
+  width: auto;
+  display: block;
+  margin: 30px auto;
+  padding: 10px 20px;
+}
+
+.centrado-total {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  margin-top: 30px;
+  background-color: #79567a;
+  color: aliceblue;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 8px;
+}
+.boton {
+  text-align: right;
+}
+
+.texto p {
+  text-align: center;
+  justify-content: center;
+}
+.texto-pag-principal {
+  margin-top: 25%;
+}
+.texto-pag-principal h1 {
+  font-size: 50px;
+  text-align: right;
+}
+
+.texto-pag-principal p {
+  font-size: 25px;
+  text-align: right;
+  font-weight: 300;
+}
+
+img {
+  height: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.imagen {
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  padding: 20px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.imagen img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.lista-usuarios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.lista-usuarios .card {
+  background-color: #f8f6fc;
+  color: #2f2f2f;
+  border-left: 6px solid #5e2e91;
+  border-radius: 10px;
+  padding: 16px;
+  min-width: 250px;
+  flex: 1 1 calc(33% - 16px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  white-space: pre-line;
+}
+
+@media (max-width: 1250px) {
+  . {
+    text-align: right;
+  }
+
+  .texto p {
+    text-align: center;
+    justify-content: center;
+  }
+  .texto-pag-principal {
+    margin-top: 25%;
+  }
+  .texto-pag-principal h1 {
+    font-size: 38px;
+    text-align: right;
+  }
+
+  .texto-pag-principal p {
+    font-size: medium;
+    text-align: right;
+  }
+  img {
+    height: 500px;
+    min-height: 100px;
+    margin: auto;
+    padding: 20px;
+  }
+}
+@media (max-width: 950px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .mitad,
+  .mitad-1 {
+    width: 100%;
+  }
+
+  img {
+    height: 800px;
+    margin: auto;
+   
+  }
+
+  .boton {
+    text-align: center;
+  }
+
+  .texto p {
+    text-align: center;
+  }
+
+  .texto-pag-principal {
+    margin-top: 10%;
+  }
+
+  .texto-pag-principal h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .texto-pag-principal p {
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .imagen {
+    padding: 10px;
+  }
+  .imagen img {
+    max-width: 90vw;
+  }
+ 
+}
+
+@media (max-width: 460px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .mitad,
+  .mitad-1 {
+    width: 100%;
+  }
+
+  img {
+    height: 10%;
+    min-height: 100px;
+    margin: auto;
+    padding: 20px;
+  }
+
+  .boton {
+    text-align: center;
+  }
+
+  .texto p {
+    text-align: center;
+  }
+
+  .texto-pag-principal {
+    margin-top: 10%;
+  }
+
+  .texto-pag-principal h1 {
+    font-size: 38px;
+    text-align: center;
+  }
+
+  .texto-pag-principal p {
+    font-size: medium;
+    text-align: center;
+  }
+}

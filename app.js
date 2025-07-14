@@ -26,8 +26,25 @@ function mostrar(){
 
 function agregarParticipante() { 
   const nombre = document.querySelector("#nombre").value;
-  const edad = document.querySelector("#edad").value;
+  const edadStr = document.querySelector("#edad").value;
   const email = document.querySelector("#email").value;
+
+  //valido los campos del formulario que no esten vacios
+  if (!nombre || !edadStr || !email) {
+    alert("Por favor, completá todos los campos.");
+    return;
+  }
+  //paso edad a num
+  const edadNum = Number(edadStr);                        
+  if ( Number.isNaN(edadNum) || !Number.isInteger(edadNum) || edadNum <= 0) {
+    alert("La edad debe ser un número entero mayor a 0.");
+    return;
+  }
+  if (!email.includes("@")) {
+    alert("El email debe contener '@'.");
+    return;
+  }
+
 
   const id = usuarios[usuarios.length - 1].id + 1;
 

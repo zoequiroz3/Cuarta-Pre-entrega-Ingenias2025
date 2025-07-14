@@ -1,4 +1,4 @@
-# Tercera-Pre-entrega-Ingenias2025
+# Cuarta-Pre-entrega-Ingenias2025
 
 Realizado por Grupo 1: Zoe Quiroz, María Eugenia Salcedo y Martina Garcia Amendola.
 
@@ -10,7 +10,7 @@ Este proyecto es una aplicación web simple que permite registrar participantes 
 
 - Registro de participantes mediante formulario.
 - Lista de participantes mostrada dinámicamente.
-- Los participantes se almacenan en un array de objetos.
+- Los participantes se almacenan en un array de objetos y persisten con `localStorage`
 - Interfaz responsive con diseño adaptado.
 - Saludo personalizado usando `localStorage`.
 

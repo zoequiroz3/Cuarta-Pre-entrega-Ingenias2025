@@ -24,7 +24,24 @@ function mostrar() {
   }
 }
 
-function agregarParticipante() { 
+let listaVisible = true;
+
+// Alterna la visibilidad y el texto del botón
+function mostrarOcultarLista() {
+  const lista = document.getElementById("listaUsuarios");
+  const btn = document.getElementById("botonMostrarOcultar");
+  if (listaVisible) {
+    lista.style.display = "none";
+    btn.textContent = "Mostrar Participantes";
+    listaVisible = false;
+  } else {
+    lista.style.display = "flex"; // CAMBIO IMPORTANTE
+    btn.textContent = "Ocultar Participantes";
+    listaVisible = true;
+  }
+}
+
+function agregarParticipante() {
   const nombre = document.querySelector("#nombre").value;
   const edadStr = document.querySelector("#edad").value;
   const email = document.querySelector("#email").value;
@@ -35,8 +52,8 @@ function agregarParticipante() {
     return;
   }
   //paso edad a num
-  const edadNum = Number(edadStr);                        
-  if ( Number.isNaN(edadNum) || !Number.isInteger(edadNum) || edadNum <= 0) {
+  const edadNum = Number(edadStr);
+  if (Number.isNaN(edadNum) || !Number.isInteger(edadNum) || edadNum <= 0) {
     alert("La edad debe ser un número entero mayor a 0.");
     return;
   }
@@ -53,7 +70,7 @@ function agregarParticipante() {
   localStorage.setItem("usuarios", JSON.stringify(usuarios));
   alert("Gracias por participar! Te deseamos mucha suerte");
 
-  document.querySelector("#formRegisto").reset()
+  document.querySelector("#formRegisto").reset();
 
   mostrar();
 }
@@ -64,7 +81,7 @@ window.onload = () => {
   if (datos) {
     usuarios = JSON.parse(datos);
   }
-  
+
   let apodo = localStorage.getItem("apodo");
 
   // Si no existe, pedirlo al usuario
@@ -72,7 +89,9 @@ window.onload = () => {
     let apodoIngresado = null;
 
     while (!apodoIngresado) {
-      apodoIngresado = prompt("¡Hola! ¿Cómo te gustaría que te llame? Compártenos tu apodo:");
+      apodoIngresado = prompt(
+        "¡Hola! ¿Cómo te gustaría que te llame? Compártenos tu apodo:"
+      );
     }
 
     localStorage.setItem("apodo", apodoIngresado);
@@ -82,4 +101,6 @@ window.onload = () => {
   // Mostrar el mensaje
   const mensaje = document.getElementById("mensajeAlCargar");
   mensaje.textContent = `Bienvenido/a, ${apodo} 👋`;
+
+  mostrar();
 };

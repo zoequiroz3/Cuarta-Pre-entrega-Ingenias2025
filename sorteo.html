@@ -19,9 +19,13 @@
       <!-- Formulario de registro -->
       <div class="contenedor-formulario">
         <form class="formulario" id="formRegisto">
-          
           <label for="nombre"> Nombre y Apellido:</label>
-          <input type="text" id="nombre" placeholder="Nombre y Apellido" required/>
+          <input
+            type="text"
+            id="nombre"
+            placeholder="Nombre y Apellido"
+            required
+          />
 
           <label for="edad"> Edad:</label>
           <input type="number" id="edad" placeholder="Edad" required />
@@ -29,7 +33,9 @@
           <label for="email"> Email:</label>
           <input type="email" id="email" placeholder="Email" required />
 
-          <button type="button" onclick="agregarParticipante()">Participar</button>
+          <button type="button" onclick="agregarParticipante()">
+            Participar
+          </button>
         </form>
       </div>
 
@@ -38,12 +44,16 @@
 
       <!-- Botón para alternar lista -->
       <div class="centrado-total">
-        <button class="boton-mostrar" onclick="mostrar()" >
-          Mostrar Participantes
+        <button
+          class="boton-mostrar-ocultar"
+          id="botonMostrarOcultar"
+          onclick="mostrarOcultarLista()"
+        >
+          Ocultar Participantes
         </button>
       </div>
 
-       <!-- Lista de usuarios -->
+      <!-- Lista de usuarios -->
       <div id="listaUsuarios" class="lista-usuarios"></div>
     </main>
 

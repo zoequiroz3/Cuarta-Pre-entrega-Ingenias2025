@@ -11,17 +11,17 @@ let usuarios = [
   { id: 2, nombre: "Ana", edad: 30, email: "ana@mail.com" },
 ];
 
-function mostrar(){
-    //var=recuperar el id 
-    let id=document.querySelector("#listaUsuarios");
+function mostrar() {
+  const contenedor = document.querySelector("#listaUsuarios");
+  contenedor.innerHTML = "";
 
-    //limpio los usuarios que haya
-    id.innerHTML = "";
-
-    //for q recorre el array para mostrarlos a los usuarios
-    for (let i = 0; i < usuarios.length; i++) {
-      id.innerHTML +=`<div class="card"> nombre: ${usuarios[i].nombre}, edad: ${usuarios[i].edad}, email: ${usuarios[i].email}<div>`;
-    }
+  for (let i = 0; i < usuarios.length; i++) {
+    const u = usuarios[i];
+    const card = document.createElement("div");
+    card.classList.add("card");
+    card.textContent = `Nombre: ${u.nombre}, Edad: ${u.edad}, Email: ${u.email}`;
+    contenedor.appendChild(card);
+  }
 }
 
 function agregarParticipante() { 
@@ -44,7 +44,6 @@ function agregarParticipante() {
     alert("El email debe contener '@'.");
     return;
   }
-
 
   const id = usuarios[usuarios.length - 1].id + 1;
 
